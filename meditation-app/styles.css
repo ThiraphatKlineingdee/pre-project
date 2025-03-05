@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
+}
+
+#background-video {
+    position: fixed; /* ให้วิดีโออยู่กับที่ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ปรับขนาดวิดีโอให้เต็มหน้าจอ */
+    z-index: -1; /* ให้วิดีโออยู่ด้านหลัง */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5); /* ปรับความโปร่งใส */
+    backdrop-filter: blur(50px); /* เพิ่มเอฟเฟกต์เบลอ */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้องค์ประกอบภายใน container อยู่ตรงกลางแนวนอน */
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+#timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* ปุ่มควบคุม */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่างองค์ประกอบ */
+}
+
+/* กรอบสีขาวครอบปุ่ม Start, Pause, Reset */
+.button-container {
+    background-color: white; /* พื้นหลังสีขาว */
+    padding: 15px;
+    border-radius: 10px; /* ขอบมน */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.start-btn {
+    background-color: #28a745; /* สีเขียว */
+}
+
+.pause-btn {
+    background-color: #dc3545; /* สีแดง */
+}
+
+.reset-btn {
+    background-color: #ffc107; /* สีเหลือง */
+    color: #333;
+}
+
+/* ปุ่มกลับหน้าแรก */
+.home-button-container {
+    margin-top: 20px;
+}
+
+.home-btn {
+    background-color: #6c757d; /* สีเทา */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #5a6268; /* สีเทาเข้มเมื่อ hover */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* การเลือกเวลาและเสียง */
+#timeSelect, #soundSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative; /* กำหนดให้เป็น container สำหรับการซ้อนทับ */
+    width: 320px; /* ความกว้างของวิดีโอและ canvas */
+    height: 240px; /* ความสูงของวิดีโอและ canvas */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+
+video, canvas {
+    position: absolute; /* ให้ video และ canvas ซ้อนทับกัน */
+    top: 0;
+    left: 0;
+    width: 100%; /* ปรับขนาดให้เต็มพื้นที่ของ container */
+    height: 100%;
+    border-radius: 10px; /* เพิ่มขอบมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    z-index: 2; /* ให้ canvas อยู่ด้านบนของ video */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#emotionResult, #advice {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#emotionResult {
+    color: #28a745; /* สีเขียวสำหรับข้อความที่พบใบหน้า */
+}
+
+#advice {
+    color: #333;
+    font-style: italic;
+}
+
+#emotionResult.no-face {
+    color: #dc3545; /* สีแดงสำหรับข้อความที่ไม่พบใบหน้า */
+}

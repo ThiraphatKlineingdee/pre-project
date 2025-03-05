@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการอารมณ์</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- เพิ่ม TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- เพิ่ม Blazeface -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+    <!-- เพิ่ม Face-API.js -->
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>จัดการอารมณ์</h1>
+        <div class="video-container">
+            <video id="webcam" width="320" height="240" autoplay></video>
+            <canvas id="canvas" width="320" height="240"></canvas>
+        </div>
+        <button onclick="startAnalysis()">เริ่มวิเคราะห์อารมณ์</button>
+        <div id="emotionResult">กำลังตรวจสอบ...</div>
+        <div id="advice"></div>
+        <br><br>
+        <a href="index.html"><button>กลับหน้าหลัก</button></a>
+    </div>
+
+    <!-- เพิ่มสคริปต์ JavaScript ของคุณ -->
+    <script src="scripts.js"></script>
+</body>
+</html>

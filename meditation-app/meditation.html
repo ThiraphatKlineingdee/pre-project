@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation</title>
+    <link rel="stylesheet" href="meditation.css">
+</head>
+<body>
+    <!-- วิดีโอพื้นหลัง -->
+    <video autoplay muted loop id="background-video">
+        <source src="bg/BG.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="circle">
+            <div id="timer">01:00</div>
+        </div>
+        <div class="controls">
+            <label for="timeSelect">Time:</label>
+            <select id="timeSelect">
+                <option value="60">1 Minute</option>
+                <option value="180">3 Minute</option>
+                <option value="300">5 Minute</option>
+                <option value="600">10 Minute</option>
+                <option value="900">15 Minute</option>
+            </select>
+            <label for="soundSelect">Sound:</label>
+            <select id="soundSelect">
+                <option value="assets/Forest.mp3">Forest</option>
+                <option value="assets/Rain.mp3">Rain</option>
+                <option value="assets/Sea.mp3">Sea</option>
+            </select>
+        </div>
+
+        <!-- เพิ่ม div ครอบปุ่ม Start, Pause, Reset -->
+        <div class="button-container">
+            <button id="startButton" class="start-btn">Start</button>
+            <button id="pauseButton" class="pause-btn">Pause</button>
+            <button id="resetButton" class="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <!-- ปุ่มกลับหน้าแรก -->
+    <div class="home-button-container">
+        <a href="index.html"><button class="home-btn">Back to Home</button></a>
+    </div>
+
+    <script src="meditation.js"></script>
+</body>
+</html>

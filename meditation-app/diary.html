@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ไดอารี่</title>
+    <link rel="stylesheet" href="diary.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ไดอารี่</h1>
+        
+        <!-- ช่องกรอกหัวข้อไดอารี่ -->
+        <input type="text" id="diaryTitle" placeholder="หัวข้อไดอารี่"><br>
+    
+        <!-- ช่องกรอกเนื้อหาไดอารี่ -->
+        <textarea id="diaryEntry" placeholder="เขียนสิ่งที่คุณคิด..."></textarea><br>
+    
+        <!-- ปุ่มเลือกอัปโหลดรูป -->
+        <input type="file" id="diaryImage" accept="image/*"><br>
+    
+        <!-- ปุ่มบันทึกไดอารี่ -->
+        <button onclick="addDiaryEntry()">บันทึก</button>
+        
+        <h2>บันทึกของฉัน</h2>
+        <div id="diaryList"></div>
+    
+        <br>
+        <a href="index.html"><button>กลับหน้าหลัก</button></a>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
